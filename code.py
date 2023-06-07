@@ -32,6 +32,9 @@ plt.gca().invert_yaxis()
 plt.xlabel("popularity")
 plt.title("Popular Movies")
 
+from sklearn.metrics.pairwise import linear_kernel
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+
 data['overview'].head()
 from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf = TfidfVectorizer(stop_words='english')
